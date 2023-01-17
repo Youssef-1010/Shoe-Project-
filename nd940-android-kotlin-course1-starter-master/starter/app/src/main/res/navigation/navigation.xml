@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFregment">
+    <fragment
+        android:id="@+id/loginFregment"
+        android:name="com.udacity.shoestore.LoginFregment"
+        android:label="LoginFregment" >
+        <action
+            android:id="@+id/action_loginFregment_to_welcomeFregment2"
+            app:destination="@id/welcomeFregment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFregment2"
+        android:name="com.udacity.shoestore.WelcomeFregment"
+        android:label="fragment_welcome_fregment"
+        tools:layout="@layout/fragment_welcome_fregment" >
+        <action
+            android:id="@+id/action_welcomeFregment2_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.udacity.shoestore.InstructionsFragment"
+        android:label="fragment_instructions"
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="com.udacity.shoestore.ShoeListFragment"
+        android:label="fragment_shoe_list"
+        tools:layout="@layout/fragment_shoe_list" >
+        <action
+            android:id="@+id/action_shoeListFragment_to_addingShoeFragment"
+            app:destination="@id/addingShoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addingShoeFragment"
+        android:name="com.udacity.shoestore.AddingShoeFragment"
+        android:label="AddingShoeFragment" >
+        <action
+            android:id="@+id/action_addingShoeFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+        <argument
+            android:name="test"
+            app:argType="string" />
+    </fragment>
+</navigation>

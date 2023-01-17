@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.ShowViewModel" />
+
+        <variable
+            name="Shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/New"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Shoe_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Shoe_Name"
+            android:text="@{Shoe.name}"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/Shoe_Size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Shoe_Size"
+            android:text="@{viewModel.shoeSize}"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/shoe_Company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Shoe_Company"
+            android:text="@{viewModel.shoeCompany}"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/Shoe_Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Shoe_Description"
+            android:text="@{viewModel.shoeDescription}"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+</layout>
